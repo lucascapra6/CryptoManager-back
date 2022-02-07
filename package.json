@@ -1,0 +1,21 @@
+{
+  "name": "jogos-nft_back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "jogos nft back",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "path": "^0.12.7",
+    "vue-router": "^3.5.3"
+  }
+}
