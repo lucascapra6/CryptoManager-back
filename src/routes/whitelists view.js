@@ -23,8 +23,15 @@ const alterarDatafinal = asyncHandler(async (req, res) => {
     res.json({id: id, dataFinal:dataFinal})
 })
 
+const deletarWhitelist = asyncHandler(async(req, res) => {
+    const id = req.body.id
+    await database.deletarWhitelist(id)
+    res.json({id: id})
+})
+
 router.get('/whitelists', getWhitelists)
 router.post('/cadastrarWhitelist', cadastrarWhitelist)
 router.put('/alterarDataFinal', alterarDatafinal)
+router.post('/deletarWhitelist', deletarWhitelist)
 
 module.exports = router
