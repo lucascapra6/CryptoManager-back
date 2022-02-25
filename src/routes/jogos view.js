@@ -4,6 +4,11 @@ const {handle} = require("express/lib/router");
 const database = require("../databaseClass")
 const gerenciadorDeJogos = require("../business")
 
+const sayHello = asyncHandler(async (req, res) => {
+    const response = 'Hello World'
+    res.json(response)
+})
+
 const getJogos = asyncHandler(async (req, res) => {
     const response = await database.getJogos()
     res.json(response)
@@ -111,6 +116,7 @@ const recalcularRoi = asyncHandler(async (req, res) => {
     res.json({id: id, roi: roi})
 })
 
+router.get('/', sayHello)
 router.get('/jogos', getJogos)
 router.post('/cadastrarJogo', cadastrarJogo)
 router.put('/atualizarBalanco', atualizarBalanco)
